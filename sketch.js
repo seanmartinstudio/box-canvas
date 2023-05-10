@@ -11,7 +11,13 @@ function setup() {
 
 function draw() {
   background(255);
+  
 
   fillPattern(pattern);
   rect(0, 0, windowWidth, windowHeight);
+
+
+  circle(mouseX, mouseY, 100)
+  fill(0)
+  // fill(0)
 }
