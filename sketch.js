@@ -16,8 +16,15 @@ function draw() {
   fillPattern(pattern);
   rect(0, 0, windowWidth, windowHeight);
 
-
-  circle(mouseX, mouseY, 100)
   fill(0)
-  // fill(0)
+  rect(200, 200, 200)
+  
+
+  fill(0)
+  circle(mouseX, mouseY, 100)
+
+  fill(0)
+  rect(350, 350, 200)
+  
+  line(200, 200, 350, 350)
 }
