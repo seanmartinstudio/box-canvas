@@ -1,4 +1,4 @@
-let pattern;
+let pattern
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -7,24 +7,38 @@ function setup() {
   buffer.background(255);
   buffer.line(0, 0, 1, 1);
   pattern = createPattern(buffer);
+
+  mouseX = 350
+  mouseY = 350
 }
 
 function draw() {
-  background(255);
-  
+  background(255)
+  fillPattern(pattern)
 
-  fillPattern(pattern);
-  rect(0, 0, windowWidth, windowHeight);
+  rect(0, 0, windowWidth, windowHeight)
 
-  fill(0)
+
   rect(200, 200, 200)
   
+  //Top Left Corener
+  line(200, 200, mouseX, mouseY)
 
-  fill(0)
-  circle(mouseX, mouseY, 100)
+  line(200, 400, mouseX, mouseY + 200)
 
-  fill(0)
-  rect(350, 350, 200)
+  //Bottom Right Corner
+  line(400, 400, mouseX + 200, mouseY + 200)
+
+ 
+
+  // fill(0)
+  // circle(mouseX, mouseY, 100)
+
+  // fill(0)
+  // rect(350, 350, 200)
+
+
+  rect(mouseX, mouseY, 200)
   
-  line(200, 200, 350, 350)
+
 }
