@@ -1,4 +1,6 @@
 let pattern
+let sqX = 350
+let sqY = 350
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -8,8 +10,6 @@ function setup() {
   buffer.line(0, 0, 1, 1);
   pattern = createPattern(buffer);
 
-  mouseX = 350
-  mouseY = 350
 }
 
 function draw() {
@@ -18,27 +18,24 @@ function draw() {
 
   rect(0, 0, windowWidth, windowHeight)
 
-
+  //Static Square
   rect(200, 200, 200)
   
   //Top Left Corener
-  line(200, 200, mouseX, mouseY)
+  line(200, 200, sqX, sqY)
 
-  line(200, 400, mouseX, mouseY + 200)
+  //Boston Left Corner
+  line(200, 400, sqX, sqY + 200)
 
   //Bottom Right Corner
-  line(400, 400, mouseX + 200, mouseY + 200)
+  line(400, 400, sqX + 200, sqY + 200)
 
- 
-
-  // fill(0)
-  // circle(mouseX, mouseY, 100)
-
-  // fill(0)
-  // rect(350, 350, 200)
-
-
-  rect(mouseX, mouseY, 200)
-  
-
+  //Moving Square
+  rect(sqX, sqY, 200)
 }
+
+function mouseDragged() {
+  sqX = mouseX
+  sqY = mouseY
+}
+
