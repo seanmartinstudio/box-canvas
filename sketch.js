@@ -22,11 +22,11 @@ function draw() {
   //Static Square
   rect(300, 200, 200)
   
-  //Top Left Corner
-  line(300, 200, sq1X, sq1Y)
+  // //Top Left Corner
+  // line(300, 200, sq1X, sq1Y)
 
-  //Top Right Corner
-  line(500, 200, sq1X + 200, sq1Y)
+  // //Top Right Corner
+  // line(500, 200, sq1X + 200, sq1Y)
 
   // //Boston Left Corner
   // line(300, 400, sq1X, sq1Y + 200)
@@ -40,6 +40,14 @@ function draw() {
   vertex(500, 400);
   vertex(sq1X + 200, sq1Y + 200);
   vertex(sq1X, sq1Y + 200);
+  endShape(CLOSE);
+
+  //Top Of Box
+  beginShape();
+  vertex(300, 200)
+  vertex(500, 200)
+  vertex(sq1X + 200, sq1Y)
+  vertex(sq1X, sq1Y)
   endShape(CLOSE);
 
   //Moving Square
