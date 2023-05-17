@@ -1,4 +1,4 @@
-let myFont
+// let myFont
 let pattern
 let sqX = 250
 let sqY = 225
@@ -19,14 +19,14 @@ function setup() {
   pattern = createPattern(buffer);
 
   //Creates Save Button
-  textFont(myFont)
+  textFont('Helvetica');
   button = createButton('CLICK TO SAVE IMAGE');
   button.position(0, 0);
   button.mousePressed(buttonClick);
   button.position(windowWidth * .85, windowHeight * .05)
   button.style('background-color', color(255));
   button.style('border-radius', '4px');
-  button.style("font-style", myFont)
+  // button.style("font-style", myFont)
 }
 
 function draw() {
@@ -81,9 +81,9 @@ function createTopAndBottomShapes() {
   endShape(CLOSE);
 }
 
-function preload() {
-  myFont = loadFont('/Roboto-Medium.ttf');
-}
+// function preload() {
+//   myFont = loadFont('/Roboto-Medium.ttf');
+// }
 
 //Creates line guides for top and bottom shapes
 function createLineGuides() {
